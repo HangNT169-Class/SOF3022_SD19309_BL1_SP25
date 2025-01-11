@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/home" method="post" th:object="${request1}">
+    <!--    MSSV: <input type="text" th:field="${request1.mssv}"/>-->
+    MSSV: <input type="text" th:field="*{mssv}"/>
+    <span th:errors="${request1.mssv}"></span>
+    <br/>
+    Ten: <input type="text" th:field="${request1.ten}">
+    <span th:errors="${request1.ten}"></span>
+    <br/>
+    Tuoi: <input type="text" th:field="${request1.tuoi}">
+    <span th:errors="*{tuoi}"></span>
+    <br/>
+    Gioi Tinh: <input type="radio" value="true" th:field="${request1.gioiTinh}"> Nam
+    <input type="radio" value="false" th:field="${request1.gioiTinh}"> Nữ
+    <br/>
+    <button type="submit">Dang Ki</button>
+</form>
+</body>
+</html>
