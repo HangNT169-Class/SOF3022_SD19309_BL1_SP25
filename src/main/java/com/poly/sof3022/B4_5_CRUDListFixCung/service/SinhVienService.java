@@ -48,4 +48,5 @@ public class SinhVienService {
     public void addSinhVien(SinhVien sv) {
         lists.add(sv);
     }
+
 }
